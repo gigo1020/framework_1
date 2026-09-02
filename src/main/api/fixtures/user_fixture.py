@@ -91,17 +91,6 @@ def two_users_with_non_empty_accounts(api_manager, created_obj) -> TransferConte
         balance_b_before=balance_b
     )
 
-# @pytest.fixture
-# def transfer_context(two_users_with_non_empty_accounts) -> TransferContext:
-#     """Возвращает контекст с балансами и ID счетов"""
-#     return TransferContext(
-#         auth_a=two_users_with_non_empty_accounts["auth_a"],
-#         account_a_id=two_users_with_non_empty_accounts["account_a"].id,
-#         balance_a_before=two_users_with_non_empty_accounts["balance_a"],
-#         account_b_id=two_users_with_non_empty_accounts["account_b"].id,
-#         balance_b_before=two_users_with_non_empty_accounts["balance_b"],
-#     )
-
 @pytest.fixture
 def transfer_data(two_users_with_non_empty_accounts) -> TransferRequestData:
     """Возвращает готовый объект TransferRequestData для степа"""
